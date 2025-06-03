@@ -1,5 +1,5 @@
 # MiniProject
 
-# Initial phase of github
-# Kore wa Lucky
+# Initial phase of Backend
+# Watashi wa Lucky
 # Preparing for JLPT N5
