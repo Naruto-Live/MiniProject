@@ -4,7 +4,8 @@ const path = require("path");
 
 
 // app.use(express.static("public"));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public/JS")));
+app.use(express.static(path.join(__dirname, "public/css")));
 
 
 app.set("views", path.join(__dirname, "/views"));
