@@ -3,50 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="/style.css">
+
     <title>Instagram</title>
-    <style>
-        h1{
-            background: linear-gradient(to right, #f06 10%, #4a90e2);
-            color: white;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-
-        button {
-            background-color: #4a90e2;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 5px;
-        }
-
-        button:hover {
-            background-color: #357ABD;
-        }
-
-        button:active {
-            background-color: #2C6DA0;
-        }
-
-        button:focus {
-            outline: none;
-            box-shadow: 0 0 5px #4a90e2;
-        }
 
 
-    </style>
 </head>
 <body>
-    <h1>This page belong to @<%= username %>. </h1>
+    <h1>This page belong to @<%= data.name %>. </h1>
     <button>Follow</button>
     <button>Message</button>
 
+    <p>Followers : <%= data.followers %>  &nbsp;&nbsp;&nbsp;&nbsp;
+    Following : <%= data.following %> </p>
 
+    <hr/>
+
+    <% for(let post of data.posts) { %>
+        <div class="post">
+            <div class="img">
+                <img src="<%= post.image %>" >
+            </div>
+            <div class="info">
+                <p>likes : <%= post.likes %> &nbsp;&nbsp;
+                comments : <%= post.comments %> </p>
+            </div>
+        </div>
+        <% } %>
+
+    
 </body>
 </html>
+
+
+

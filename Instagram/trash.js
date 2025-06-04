@@ -3,10 +3,6 @@ const app = express();
 const path = require("path");
 
 
-// app.use(express.static("public"));
-app.use(express.static(path.join(__dirname, "public")));
-
-
 app.set("views", path.join(__dirname, "/views"));
 
 
@@ -18,14 +14,9 @@ app.get("/" , ( req , res ) => {
 
 // req.params: This contains the route parameters — the dynamic parts of the URL path.
 app.get("/ig/:username" , ( req , res ) => {
+    const followers = ["adam","eve","latringParsad","kuttaTutti"];
     let {username} = req.params;
-    const instaData = require("./data.json");
-    const data = instaData[username];
-    if(!data) {
-        return res.render("error.ejs");
-    }
-    console.log(data);
-    res.render("instagram.ejs" , { data });
+    res.render("instagram.ejs" , {username , followers});
 });
 
 app.get("/hello" , ( req , res ) => {
