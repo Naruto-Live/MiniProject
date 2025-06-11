@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: maroon;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.post {
+    border: 1px solid #c86363;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.post  {
+    margin-bottom: 0.5rem;
+    background-color: hotpink;
+}
+
+.post h4 {
+    color: #555;
+}
